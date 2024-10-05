@@ -543,13 +543,13 @@ def run_all(csv_file, telangana_file, mongo_url):
     df, missing_comparison = process_missing_data(df)
     print("Missing Data Comparison:")
     print(missing_comparison)
-    df.to_csv("result1.csv")
+    #df.to_csv("result1.csv")
     
     # Task 5: Save to MongoDB
-    #save_to_mongo(df, mongo_url)
+    save_to_mongo(df, mongo_url)
     
     # Task 6: Upload to Relational Database
-    #upload_to_tidb_from_mongo(csv_file, mongo_url, tidb_config)
+    upload_to_tidb_from_mongo(csv_file, mongo_url, tidb_config)
     
     # Task 7: Run queries and display in Streamlit
     # engine = create_engine(db_url)
